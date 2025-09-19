@@ -7,6 +7,6 @@ const router=express.Router()
 router.get("/",authmiddleware,getcomment)
 router.get("/:blogid",getcommentByBlog)
 router.post("/",authmiddleware,createComment)
-router.put("/commentId",authmiddleware,updatecomment)
+router.put("/:commentId",authmiddleware,updatecomment)
 
 module.exports=router

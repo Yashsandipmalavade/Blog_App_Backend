@@ -19,7 +19,7 @@ exports.createComment=async(req,res)=>{
         await blogdata.save()
 
         await Comment.populate("user","username role")
-        res.status(201).json({Message:"comment created","comment":comment})
+        res.status(201).json({Message:"comment created","comment":Comment})
 
     }catch(err){
         console.log(err)

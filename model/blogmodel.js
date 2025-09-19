@@ -1,6 +1,7 @@
 const { type } = require("express/lib/response");
 const mongoose = require("mongoose");
 const comment = require("./comment");
+const Like=require("../model/like")
 
 const blogschema = new mongoose.Schema({
     title: {
@@ -20,6 +21,10 @@ const blogschema = new mongoose.Schema({
     comments:[{
         type:mongoose.Schema.Types.ObjectId,
         ref:"comment"
+    }],
+    likes:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Like"
     }],
     createdAt:{
         type:Date,

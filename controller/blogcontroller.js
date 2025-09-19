@@ -88,7 +88,7 @@ const updateblog=async(req,res)=>{
         //check that auther and user.id  is same then only able to update
         console.log(blog.author.toString(),"id compare",req.user.id)
         if (blog.author.toString()!==req.user.id){
-            return res.status(403).json({error:"Unauthorized"})
+            return res.status(403).json({error:"Unauthorized or Only author can update these blog"})
         }
         //update the data
         blog.title=req.body.title || blog.title

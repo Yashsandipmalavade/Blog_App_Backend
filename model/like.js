@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const likeschema=new mongoose.Schema({
     blog:{
-        type:mongoose.Schema.Types.ObjectId,ref:"Blog"
+        type:mongoose.Schema.Types.ObjectId,ref:"BLOG"
         },  
     user:{
         type:mongoose.Schema.Types.ObjectId,ref:"User"

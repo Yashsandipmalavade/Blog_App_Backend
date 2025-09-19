@@ -5,8 +5,8 @@ const authmiddleware = require("../middleware/authenti_middleware")
 const router=express.Router()
 
 router.get("/",authmiddleware,getcomment)
-router.get("/blog/blogid",getcommentByBlog)
+router.get("/blog/:blogid",getcommentByBlog)
 router.post("/",authmiddleware,createComment)
-router.put("/id",authmiddleware,updatecomment)
+router.put("/:id",authmiddleware,updatecomment)
 
 module.exports=router
